@@ -1,11 +1,7 @@
 #We are solving the same problem of searching for pattern P of length M in text T of length N.
 #Implement a pattern search algorithm which uses the suffix array of T that works in time O(M log n).
 
-# This file contains an implementation of the algorithm presented in "Faster
-#Suffix Sorting" by N. Jesper Larsson (jesper@cs.lth.se) and Kunihiko
-# Sadakane (sada@is.s.u-tokyo.ac.jp). It is based off of qsufsort.c, also by N. Jesper Larsson.
-def cons_suf_arr(str):
-    return "hi"
+# this implementation is taken from geeksforgeeks
 
 
 import sys
@@ -35,7 +31,7 @@ def search(pat, txt, suffArr, n):
 
             # Print the index and return
             print("Pattern found at index", suffArr[mid])
-            return
+            return suffArr[mid]
 
         # If the substring is less than the pattern
         if res < pat:
@@ -111,8 +107,8 @@ def naive_search (T, P):
 
 # Driver program to test above function
 def main():
-    txt = "banana"  # text
-    pat = "nan"   # pattern to be searched in text
+    txt = sys.argv[1]  # text
+    pat = sys.argv[2]   # pattern to be searched in text
 
     # Build suffix array
     n = len(txt)

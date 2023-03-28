@@ -12,12 +12,14 @@ def stress_test(max_N, alphabet):
     rand_pattern = rand_string[rand_pattern_start:rand_pattern_start+rand_pattern_len+1]
 
     matches1 = pattern_search.naive_search(rand_string, rand_pattern)
+
     # Build suffix array
-    n = len(rand_string)
-    suffArr = pattern_search.buildSuffixArray(rand_string, n)
+    suffArr = pattern_search.buildSuffixArray(rand_string, N)
 
     # search pat in txt using the built suffix array
-    matches2 = pattern_search.search(rand_pattern, rand_string, suffArr, n)
+    matches2 = pattern_search.search(rand_pattern, rand_string, suffArr, N)
+    print(matches2)
+    
     if matches1 != matches2:
         print(rand_string)
         print(rand_pattern)

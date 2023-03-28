@@ -19,6 +19,7 @@
  At the end of this document (or in a separate README file), explain how to run your code (including the construction of the suffix array) and how to run stress tests.
 
 HOW TO RUN CODE:
-when running pattern_search.py, it takes in two strings from the command line. The first string is the text that you are searching, and the second string as the pattern that you are searching for.
+when running pattern_search.py, it takes in two strings from the command line. The first string is the text that you are searching, and the second string as the pattern that you are searching for. counting_occurrences is the same way. in both cases the suffix array is created automatically
 
 HOW TO RUN STRESS TEST:
+you just have to run stress_test! yay
